@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script>
+    // Function to validate the form
+    function validateForm() {
+      var name = document.forms["aboutForm"]["name"].value;
+      var email = document.forms["aboutForm"]["email"].value;
+      var message = document.forms["aboutForm"]["message"].value;
+
+      if (name == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+
+      if (email == "") {
+        alert("Email must be filled out");
+        return false;
+      }
+
+      if (message == "") {
+        alert("Message must be filled out");
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Olympics</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\ADNAN COMPUTER ZONE\Desktop\fahad_eproject\header\header.html" target="blank">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\ADNAN COMPUTER ZONE\Desktop\fahad_eproject\header\about.html" target="blank">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\ADNAN COMPUTER ZONE\Desktop\fahad_eproject\header\contact.html" target="blank">Faq</a>
+            </li> 
+          </ul>
+        </div>
+      </nav>
+
+
+<br/><br/>
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Please Fill The Following Form to Get In Touch With Us !</p>
+    <form name="aboutForm" onsubmit="return validateForm()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea class="form-control" id="message" placeholder="Enter your message" name="message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+   <!-- Footer -->
+   <p style="text-align: center;">For more information, visit the <a href="https://www.olympic.org" target="_blank">official Olympics website</a>.</p>
+</footer>
+
+
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2023 Olympics. All rights reserved.</p>
+  </footer> 
+
+</body>
+</html>
